@@ -52,7 +52,7 @@ body {
     width: 100%;            /* Full width across screen */
     backdrop-filter: blur(20px); /* Modern blur effect behind navbar */
     z-index: 1000;          /* Ensure navbar stays above other content */
-    padding: 1rem 0;        /* Vertical padding for navbar height */
+    padding: 0.5rem 0;        /* Vertical padding for navbar height */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
     transition: all 0.3s ease; /* Smooth transitions for hover effects */
 }
@@ -193,7 +193,7 @@ body {
 /* Main call-to-action button in navigation */
 .get-started {
     background: linear-gradient(135deg, #148e41, #22c55e);
-    padding: 0.75rem 1.5rem; /* Comfortable padding */
+    padding: 0.5rem 1rem; /* Comfortable padding */
     border-radius: 0.5rem;  /* Rounded corners */
     text-decoration: none;  /* Remove underline */
     color: white;          /* White text */
@@ -285,7 +285,7 @@ body {
 .mobile-nav-links a {
     color: #d1d5db;      /* Light gray text */
     text-decoration: none; /* Remove underline */
-    font-weight: 500;     /* Medium font weight */
+    font-weight: 200;     /* Medium font weight */
     padding: 1rem;       /* Large padding for touch targets */
     border-radius: 0.5rem; /* Rounded corners */
     transition: all 0.3s ease; /* Smooth transitions */
@@ -295,8 +295,7 @@ body {
 /* Mobile navigation link hover/active states */
 .mobile-nav-links a:hover,
 .mobile-nav-links a.active {
-    color: #ef4444;       /* Brand red color */
-    background: rgba(239, 68, 68, 0.1); /* Subtle red background */
+    color: #808080;        /* Brand red color on hover */
 }
 
 /*
@@ -1490,7 +1489,7 @@ body {
     border-radius: 0.5rem;
     border: 1px solid rgba(255,255,255,0.08);
     background: rgba(255,255,255,0.02);
-    color: white;
+    color: #9ca3af;
     outline: none;
 }
 
@@ -1776,6 +1775,14 @@ BENEFITS SECTION (CONTACT PAGE)
     font-size: 1.5rem;  /* Large icon size */
 }
 
+/* Footer logo icon images */
+.footer-logo-icon img {
+    width: 48px;        /* Image width */
+    height: 48px;       /* Image height */
+    border-radius: 50%; /* Perfect circle */
+    object-fit: cover;  /* Cover the container */
+}
+
 /* SVG icons in footer logo */
 .footer-logo-icon svg {
     width: 24px;        /* SVG width */
@@ -1784,16 +1791,29 @@ BENEFITS SECTION (CONTACT PAGE)
     fill: currentColor; /* Use current color */
 }
 
-/* Footer logo text container */
-.footer-logo-text {
-    text-align: left;   /* Left align text */
-}
-
 /* Footer logo title */
 .footer-logo-title {
     font-size: 1.5rem;  /* Large title text */
     font-weight: bold;  /* Bold text */
     color: white;       /* White text */
+}
+
+/* Footer logo text container (for inline styled divs) */
+.footer-logo > div {
+    text-align: left;   /* Left align text */
+}
+
+/* Footer logo title (for inline styled divs) */
+.footer-logo > div > div:first-child {
+    font-size: 1.5rem;  /* Large title text */
+    font-weight: bold;  /* Bold text */
+    color: white;       /* White text */
+}
+
+/* Footer logo subtitle (for inline styled divs) */
+.footer-logo > div > div:last-child {
+    font-size: 0.75rem; /* Small subtitle text */
+    color: #9ca3af;     /* Muted gray color */
 }
 
 /* Footer logo subtitle */
@@ -1828,7 +1848,7 @@ BENEFITS SECTION (CONTACT PAGE)
 
 /* Footer link hover effect */
 .footer-links a:hover {
-    color: #ef4444;     /* Brand red on hover */
+    color: #808080;     /* Brand red on hover */
 }
 
 /*

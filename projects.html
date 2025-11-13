@@ -12,9 +12,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <div class="logo-icon">
-                    <img src="img/logo/clouduko.jpg" alt="Cloud UKO" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
-                </div>
+                <img src="img/logo/clouduko.jpg" alt="Cloud UKO" class="logo-img">
                 <div>
                     <div class="logo-text">Cloud UKO</div>
                     <span class="logo-subtext">United Knowledge Operations</span>
@@ -30,6 +28,24 @@
             </ul>
             
             <a href="contact.html" class="get-started">Get Started</a>
+
+            <!-- Mobile menu toggle button (hamburger) -->
+            <button class="mobile-menu-toggle" id="mobile-toggle">
+                <span></span><!-- Top line of hamburger -->
+                <span></span><!-- Middle line of hamburger -->
+                <span></span><!-- Bottom line of hamburger -->
+            </button>
+        </div>
+
+        <!-- Mobile navigation menu (hidden by default) -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="service.html" class="nav-link">Services</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -416,7 +432,7 @@
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="service.html">Services</a>
-                <a href="projects.html">Projects</a>
+                <!-- <a href="projects.html">Projects</a> -->
                 <a href="contact.html">Contact</a>
             </div>
             
@@ -429,9 +445,17 @@
     <script>
         // Enhanced Navigation Functionality
         document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileToggle = document.getElementById('mobile-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
             const navbar = document.getElementById('navbar');
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const projectCards = document.querySelectorAll('.project-card');
+
+            if (mobileToggle && mobileMenu) {
+                mobileToggle.addEventListener('click', function() {
+                    mobileToggle.classList.toggle('active');
+                    mobileMenu.classList.toggle('active');
+                });
+            }
 
             // Navbar scroll effect
             window.addEventListener('scroll', function() {

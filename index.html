@@ -66,47 +66,8 @@ BODY SECTION - MAIN WEBSITE CONTENT
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
 
-            <!-- Call-to-action button with AI popup -->
-            <div class="get-started-container">
-                <a href="contact.html" class="get-started" id="get-started-btn">Get Started</a>
-                
-                <!-- 2D Animated Vintage Purple AI Character -->
-                <div class="ai-character" id="ai-character">
-                    <div class="ai-body">
-                        <!-- AI Head with vintage design -->
-                        <div class="ai-head">
-                            <div class="ai-antenna">
-                                <div class="ai-antenna-tip"></div>
-                            </div>
-                            <!-- AI Eyes with blinking animation -->
-                            <div class="ai-eyes">
-                                <div class="ai-eye left">
-                                    <div class="ai-pupil"></div>
-                                </div>
-                                <div class="ai-eye right">
-                                    <div class="ai-pupil"></div>
-                                </div>
-                            </div>
-                            <!-- AI Mouth -->
-                            <div class="ai-mouth"></div>
-                        </div>
-                        <!-- AI Body -->
-                        <div class="ai-torso">
-                            <div class="ai-screen">
-                                <div class="ai-screen-line"></div>
-                                <div class="ai-screen-line"></div>
-                                <div class="ai-screen-line"></div>
-                            </div>
-                        </div>
-                        <!-- AI Arms -->
-                        <div class="ai-arms">
-                            <div class="ai-arm left"></div>
-                            <div class="ai-arm right"></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+            <!-- Call-to-action button -->
+            <a href="contact.html" class="get-started">Get Started</a>
 
             <!-- Mobile menu toggle button (hamburger) -->
             <button class="mobile-menu-toggle" id="mobile-toggle">
@@ -478,58 +439,38 @@ BODY SECTION - MAIN WEBSITE CONTENT
             </div>
         </div>
     </section>
-
-    <!--
-    ==========================================
-    FOOTER SECTION
-    ==========================================
-    Website footer with company information and navigation links.
-    Includes logo, company description, and secondary navigation.
-    Provides additional contact and legal information.
-    ==========================================
-    -->
-    <footer class="footer">
-        <!-- Footer content container -->
-        <div class="footer-container">
-            <!-- Footer logo and company info -->
-            <div class="footer-logo">
-                <!-- Footer logo icon -->
-                <div class="footer-logo-icon">
-                    <!-- Logo image -->
-                <img src="img/logo/clouduko.jpg" alt="Cloud UKO" class="logo-img">
-                </div>
-                <!-- Footer logo text -->
-                <div class="footer-logo-text">
-                    <div class="footer-logo-title">Cloud UKO</div>
-                    <div class="footer-logo-subtitle">United Knowledge Operations</div>
-                </div>
+    
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <div class="footer-logo-icon">
+                <img src="img/logo/clouduko.jpg" alt="Cloud UKO" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
             </div>
-            
-            <!-- Footer description -->
-            <p class="footer-text">
-                Transforming businesses through integrated digital solutions. 
-                Proven results, measurable ROI, sustainable growth.
-            </p>
-            
-            <!-- Footer navigation links -->
-            <div class="footer-links">
-                <a href="about.html">About</a>
-                <a href="service.html">Services</a>
-                <!-- <a href="projects.html">Projects</a> -->
-                <a href="contact.html">Contact</a>
-            </div>
-            
-            <!-- Copyright information -->
-            <div class="footer-text">
-                © 2025 Cloud UKO. All rights reserved.
+            <div>
+                <div style="font-size: 1.5rem; font-weight: bold; color: white;">Cloud UKO</div>
+                <div style="font-size: 0.75rem; color: #9ca3af;">United Knowledge Operations</div>
             </div>
         </div>
-    </footer>
+        
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="service.html">Services</a>
+            <!-- <a href="projects.html">Projects</a> -->
+            <a href="contact.html">Contact</a>
+        </div>
+        
+        <p class="footer-text">
+            © 2025 Cloud UKO. Transforming businesses through integrated digital solutions.
+        </p>
+    </div>
+</footer>
 
     <!--
     ==========================================
     JAVASCRIPT SECTION
-    ==========================================
+{{ ... }}
     Interactive functionality for the website including:
     - Mobile menu toggle
     - Smooth scrolling

@@ -12,9 +12,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <div class="logo-icon">
-                    <img src="img/logo/clouduko.jpg" alt="Cloud UKO" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
-                </div>
+                <img src="img/logo/clouduko.jpg" alt="Cloud UKO" class="logo-img">
                 <div>
                     <div class="logo-text">Cloud UKO</div>
                     <span class="logo-subtext">United Knowledge Operations</span>
@@ -30,7 +28,24 @@
             </ul>
             
             <a href="contact.html" class="get-started">Get Started</a>
+
+            <!-- Mobile menu toggle button (hamburger) -->
+            <button class="mobile-menu-toggle" id="mobile-toggle">
+                <span></span><!-- Top line of hamburger -->
+                <span></span><!-- Middle line of hamburger -->
+                <span></span><!-- Bottom line of hamburger -->
+            </button>
         </div>
+
+        <!-- Mobile navigation menu (hidden by default) -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="service.html" class="nav-link">Services</a></li>
+                <!-- <li><a href="projects.html" class="nav-link">Projects</a></li> -->
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
     </nav>
 
     <!-- Hero Section -->
@@ -204,40 +219,28 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <!-- Footer content container -->
         <div class="footer-container">
-            <!-- Footer logo and company info -->
             <div class="footer-logo">
-                <!-- Footer logo icon -->
                 <div class="footer-logo-icon">
-                    <!-- Logo image -->
-                <img src="img/logo/clouduko.jpg" alt="Cloud UKO" class="logo-img">
+                    <img src="img/logo/clouduko.jpg" alt="Cloud UKO" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
                 </div>
-                <!-- Footer logo text -->
-                <div class="footer-logo-text">
-                    <div class="footer-logo-title">Cloud UKO</div>
-                    <div class="footer-logo-subtitle">United Knowledge Operations</div>
+                <div>
+                    <div style="font-size: 1.5rem; font-weight: bold; color: white;">Cloud UKO</div>
+                    <div style="font-size: 0.75rem; color: #9ca3af;">United Knowledge Operations</div>
                 </div>
             </div>
             
-            <!-- Footer description -->
-            <p class="footer-text">
-                Transforming businesses through integrated digital solutions. 
-                Proven results, measurable ROI, sustainable growth.
-            </p>
-            
-            <!-- Footer navigation links -->
             <div class="footer-links">
+                <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="service.html">Services</a>
                 <!-- <a href="projects.html">Projects</a> -->
                 <a href="contact.html">Contact</a>
             </div>
             
-            <!-- Copyright information -->
-            <div class="footer-text">
-                © 2025 Cloud UKO. All rights reserved.
-            </div>
+            <p class="footer-text">
+                © 2025 Cloud UKO. Transforming businesses through integrated digital solutions.
+            </p>
         </div>
     </footer>
 
@@ -245,9 +248,19 @@
         // Enhanced Navigation Functionality
         document.addEventListener('DOMContentLoaded', function() {
             const navbar = document.getElementById('navbar');
+            const mobileToggle = document.getElementById('mobile-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
             const contactForm = document.getElementById('contactForm');
             const packageOptions = document.querySelectorAll('.package-option');
             const successMessage = document.getElementById('successMessage');
+
+            // Mobile menu toggle
+            if (mobileToggle && mobileMenu) {
+                mobileToggle.addEventListener('click', function() {
+                    mobileToggle.classList.toggle('active');
+                    mobileMenu.classList.toggle('active');
+                });
+            }
 
             // Navbar scroll effect
             window.addEventListener('scroll', function() {

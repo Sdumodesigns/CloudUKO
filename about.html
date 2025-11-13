@@ -11,9 +11,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <div class="logo-icon">
-                    <img src="img/logo/clouduko.jpg" alt="Cloud UKO" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
-                </div>
+                <img src="img/logo/clouduko.jpg" alt="Cloud UKO" class="logo-img">
                 <div>
                     <div class="logo-text">Cloud UKO</div>
                     <span class="logo-subtext">United Knowledge Operations</span>
@@ -29,7 +27,24 @@
             </ul>
             
             <a href="contact.html" class="get-started">Get Started</a>
+
+            <!-- Mobile menu toggle button (hamburger) -->
+            <button class="mobile-menu-toggle" id="mobile-toggle">
+                <span></span><!-- Top line of hamburger -->
+                <span></span><!-- Middle line of hamburger -->
+                <span></span><!-- Bottom line of hamburger -->
+            </button>
         </div>
+
+        <!-- Mobile navigation menu (hidden by default) -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="service.html" class="nav-link">Services</a></li>
+                <!-- <li><a href="projects.html" class="nav-link">Projects</a></li> -->
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
     </nav>
 
     <!-- Hero Section -->
@@ -172,6 +187,16 @@
         // Enhanced Navigation Functionality
         document.addEventListener('DOMContentLoaded', function() {
             const navbar = document.getElementById('navbar');
+            const mobileToggle = document.getElementById('mobile-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Mobile menu toggle
+            if (mobileToggle && mobileMenu) {
+                mobileToggle.addEventListener('click', function() {
+                    mobileToggle.classList.toggle('active');
+                    mobileMenu.classList.toggle('active');
+                });
+            }
 
             // Navbar scroll effect
             window.addEventListener('scroll', function() {

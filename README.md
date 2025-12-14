@@ -1,4 +1,6 @@
 # Cloud UKO - Digital Transformation Solutions
+local testing past this to your terminal
+python -m http.server 8000
 
 🚀 **Live Website**: [View on GitHub Pages](https://yourusername.github.io/clouduko_site)
 

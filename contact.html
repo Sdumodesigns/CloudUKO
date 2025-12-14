@@ -12,11 +12,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="img/logo/clouduko.jpg" alt="Cloud UKO" class="logo-img">
-                <div>
-                    <div class="logo-text">Cloud UKO</div>
-                    <span class="logo-subtext">United Knowledge Operations</span>
-                </div>
+                <img src="img/logo/Logo color-01.png" alt="Cloud UKO" class="logo-img">
             </a>
             
             <ul class="nav-links">
@@ -83,7 +79,7 @@
                             </div>
                             <div class="contact-text">
                                 <h3>Email Us</h3>
-                                <p>hello@clouduko.com</p>
+                                <p>info@clouduko.co.za</p>
                             </div>
                         </div>
 
@@ -93,7 +89,7 @@
                             </div>
                             <div class="contact-text">
                                 <h3>Call Us</h3>
-                                <p>+27 (0) 11 123-4567</p>
+                                <p>+27 617 914 022</p>
                             </div>
                         </div>
 
@@ -222,11 +218,7 @@
         <div class="footer-container">
             <div class="footer-logo">
                 <div class="footer-logo-icon">
-                    <img src="img/logo/clouduko.jpg" alt="Cloud UKO" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
-                </div>
-                <div>
-                    <div style="font-size: 1.5rem; font-weight: bold; color: white;">Cloud UKO</div>
-                    <div style="font-size: 0.75rem; color: #9ca3af;">United Knowledge Operations</div>
+                    <img src="img/logo/Logo color-01.png" alt="Cloud UKO" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
                 </div>
             </div>
             
@@ -244,9 +236,12 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
-        // Enhanced Navigation Functionality
         document.addEventListener('DOMContentLoaded', function() {
+            // Initialize EmailJS
+            emailjs.init("C_HD3a26EvQR204lN"); // Replace with your EmailJS Public Key
+            
             const navbar = document.getElementById('navbar');
             const mobileToggle = document.getElementById('mobile-toggle');
             const mobileMenu = document.getElementById('mobile-menu');
@@ -292,43 +287,72 @@
                 }
             });
 
-            // Form submission
+            // Form submission with EmailJS
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 
-                // Get form data
-                const formData = new FormData(contactForm);
                 const selectedPackage = document.querySelector('.package-option.selected');
+                const budgetValue = document.getElementById('budget').value;
+                const customBudget = document.getElementById('customBudget').value;
                 
-                // Add selected package to form data
-                if (selectedPackage) {
-                    formData.append('package', selectedPackage.dataset.package);
-                }
+                const templateParams = {
+                    to_email: 'info@clouduko.co.za',
+                    firstName: document.getElementById('firstName').value,
+                    lastName: document.getElementById('lastName').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value || 'Not provided',
+                    company: document.getElementById('company').value,
+                    package: selectedPackage ? selectedPackage.dataset.package : 'Not selected',
+                    budget: customBudget || budgetValue || 'Not specified',
+                    message: document.getElementById('message').value
+                };
 
-                // Simulate form submission
                 const submitButton = contactForm.querySelector('.form-button');
                 const originalText = submitButton.textContent;
                 
                 submitButton.textContent = 'Sending...';
                 submitButton.disabled = true;
                 
-                // Simulate API call
-                setTimeout(() => {
-                    successMessage.classList.add('show');
-                    contactForm.reset();
-                    packageOptions.forEach(opt => opt.classList.remove('selected'));
-                    
-                    submitButton.textContent = originalText;
-                    submitButton.disabled = false;
-                    
-                    // Hide success message after 5 seconds
-                    setTimeout(() => {
-                        successMessage.classList.remove('show');
-                    }, 5000);
-                }, 2000);
+                // Send email to admin
+                emailjs.send('service_fkrs032', 'template_v4mahsc', templateParams)
+                    .then(function(response) {
+                        console.log('Admin email sent!', response.status, response.text);
+                        
+                        // Send confirmation email to user
+                        const userConfirmationParams = {
+                            to_email: document.getElementById('email').value,
+                            firstName: document.getElementById('firstName').value,
+                            lastName: document.getElementById('lastName').value
+                        };
+                        
+                        return emailjs.send('service_fkrs032', 'template_vjb0vov', userConfirmationParams);
+                    })
+                    .then(function(response) {
+                        console.log('Confirmation email sent!', response.status, response.text);
+                        
+                        successMessage.textContent = '✓ Thank you! Your message has been sent successfully. We\'ll be in touch soon. A confirmation email has been sent to ' + templateParams.email;
+                        successMessage.classList.add('show');
+                        contactForm.reset();
+                        packageOptions.forEach(opt => opt.classList.remove('selected'));
+                        
+                        submitButton.textContent = originalText;
+                        submitButton.disabled = false;
+                        
+                        setTimeout(() => {
+                            successMessage.classList.remove('show');
+                            successMessage.textContent = 'Thank you! Your message has been sent successfully. We\'ll be in touch soon.';
+                        }, 5000);
+                    })
+                    .catch(function(error) {
+                        console.log('FAILED...', error);
+                        console.error('Error details:', error);
+                        alert('Failed to send message. Please try again or contact us directly.');
+                        submitButton.textContent = originalText;
+                        submitButton.disabled = false;
+                    });
             });
 
-            // Form validation enhancements
+            // Form validation
             const requiredFields = contactForm.querySelectorAll('[required]');
             requiredFields.forEach(field => {
                 field.addEventListener('blur', function() {

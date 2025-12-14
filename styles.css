@@ -88,18 +88,15 @@ body {
     color: inherit;         /* Use parent's text color */
 }
 .logo-img {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
+    width: 50px;
+    height: 50px;
     object-fit: cover;
 }
 
 /* Logo icon circle with gradient background */
 .logo-icon {
-    width: 48px;            /* Icon width */
-    height: 48px;           /* Icon height (creates perfect circle) */
-    background: linear-gradient(135deg, #ef4444, #3b82f6); /* Red to blue gradient */
-    border-radius: 50%;     /* Make circular */
+    width: 50px;            /* Icon width */
+    height: 50px;           /* Icon height (creates perfect circle) */
     display: flex;          /* Center content inside */
     align-items: center;    /* Vertically center */
     justify-content: center; /* Horizontally center */
@@ -1764,10 +1761,8 @@ BENEFITS SECTION (CONTACT PAGE)
 
 /* Footer logo icon */
 .footer-logo-icon {
-    width: 48px;        /* Icon width */
-    height: 48px;       /* Icon height */
-    background: linear-gradient(135deg, #ef4444, #3b82f6); /* Red to blue gradient */
-    border-radius: 50%; /* Perfect circle */
+    width: 50px;        /* Icon width */
+    height: 50px;       /* Icon height */
     display: flex;      /* Flexbox for centering */
     align-items: center; /* Vertically center */
     justify-content: center; /* Horizontally center */
@@ -1777,9 +1772,8 @@ BENEFITS SECTION (CONTACT PAGE)
 
 /* Footer logo icon images */
 .footer-logo-icon img {
-    width: 48px;        /* Image width */
-    height: 48px;       /* Image height */
-    border-radius: 50%; /* Perfect circle */
+    width: 50px;        /* Image width */
+    height: 50px;       /* Image height */
     object-fit: cover;  /* Cover the container */
 }
 

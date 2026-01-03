@@ -708,6 +708,42 @@ BODY SECTION - MAIN WEBSITE CONTENT
                     }
                 });
             }
+            // Services List Toggle Handler for Mobile
+            (function(){
+              var toggle = document.getElementById('toggle-services');
+              var list = document.querySelector('.services-list');
+              if(!toggle || !list) return;
+              
+              // Initialize: collapse list on mobile by default
+              function initializeState(){
+                if(window.innerWidth <= 900){
+                  list.classList.add('collapsed');
+                  toggle.style.display='inline-block';
+                  toggle.setAttribute('aria-expanded','false');
+                  toggle.textContent='View Services ▾';
+                } else {
+                  list.classList.remove('collapsed');
+                  toggle.style.display='none';
+                  toggle.setAttribute('aria-expanded','true');
+                }
+              }
+              
+              // Initialize on page load
+              initializeState();
+              
+              // Re-initialize on window resize
+              window.addEventListener('resize', initializeState);
+              
+              // Toggle handler
+              if(toggle && list){
+                toggle.addEventListener('click', function(){
+                  var isCollapsed = list.classList.toggle('collapsed');
+                  toggle.setAttribute('aria-expanded', (!isCollapsed).toString());
+                  toggle.textContent = isCollapsed ? 'View Services ▾' : 'Hide Services ▴';
+                });
+              }
+            })();
+            
             // Service Option Button Handler (inside DOMContentLoaded for reliability)
             const options = document.querySelectorAll('.service-option');
             options.forEach(opt => {

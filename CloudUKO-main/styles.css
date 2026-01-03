@@ -1,0 +1,13 @@
+/* Mobile: raise video visibility and add services toggle */
+.services-toggle { display: none; }
+@media (max-width: 900px) {
+  .services-toggle { display: inline-block; margin-bottom: 0.75rem; background: rgba(99,102,241,0.12); border:1px solid rgba(99,102,241,0.22); color:#c7d2fe; padding:0.5rem 0.9rem; border-radius:999px; cursor:pointer; font-size:0.95rem; }
+  .services-list.collapsed { display: none; }
+}
+@media (max-width: 480px) {
+  .services-overview { padding-top: 3rem; padding-bottom: 2rem; }
+  .services-video-wrapper { max-height: 320px; }
+  .services-content { margin-top: -50px; padding: 1.25rem; }
+  /* kept for extra small devices */
+  .services-list.collapsed { display: none; }
+}

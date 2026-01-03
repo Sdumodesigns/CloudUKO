@@ -1,6 +1,10 @@
 # Cloud UKO - Digital Transformation Solutions
 
-🚀 **Live Website**: [View on GitHub Pages](https://yourusername.github.io/clouduko_site)
+## Version 2.0 🆕
+
+Cloud UKO Version 2 features enhanced design, improved performance, and expanded service offerings. This version includes professional animations, optimized responsiveness, and a refined user interface for better customer engagement.
+
+🚀 **Live Website**: [View on GitHub Pages](https://yourusername.github.io/Cloud_uko_V2)
 
 ## About Cloud UKO
 

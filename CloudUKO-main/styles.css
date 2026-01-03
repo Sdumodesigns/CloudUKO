@@ -7,9 +7,12 @@
   .services-toggle:hover { background: rgba(99,102,241,0.25); }
   .services-list { max-height: 0; opacity: 0; margin: 0; padding-top: 0; padding-bottom: 0; }
   .services-list:not(.collapsed) { max-height: 9999px; opacity: 1; padding-top: 1rem; padding-bottom: 0.5rem; margin-bottom: 0.75rem; }
+  .services-video-wrapper { max-height: 380px; }
+  .services-content { margin-top: -100px; }
 }
 @media (max-width: 480px) {
   .services-overview { padding-top: 3rem; padding-bottom: 2rem; }
-  .services-video-wrapper { max-height: 320px; }
-  .services-content { margin-top: -50px; padding: 1.25rem; }
+  .services-video-wrapper { max-height: 380px; }
+  .services-content { margin-top: -120px; padding: 1.25rem; }
 }
+

@@ -54,6 +54,15 @@ High-performance automation for large organizations
 - **Performance**: Optimized for fast loading
 - **Accessibility**: Screen reader friendly
 
+
+## Local Development
+
+To run the project locally, you can use `npx` to start a simple static file server:
+
+```bash
+npx -y serve .
+```
+
 ## Deployment
 
 This site is optimized for **GitHub Pages** static hosting:

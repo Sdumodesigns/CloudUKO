@@ -11,29 +11,43 @@ Last Updated: November 2025
 Features: Responsive design, modern animations, accessibility optimized
 ==========================================
 -->
+
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ELE42ZF0T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-4ELE42ZF0T');
+    </script>
     <!-- Character encoding for proper text display -->
     <meta charset="UTF-8">
-    
+
     <!-- Responsive viewport meta tag for mobile optimization -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Page title for browser tab and SEO -->
     <title>Cloud UKO - Digital Transformation Solutions</title>
-    
+
     <!-- Meta description for search engines and social sharing -->
-    <meta name="description" content="Transform your business with Cloud UKO's integrated digital solutions. Up to 85% cost reduction with proven ROI.">
-    
+    <meta name="description"
+        content="Transform your business with Cloud UKO's integrated digital solutions. Up to 85% cost reduction with proven ROI.">
+
     <!-- Link to external CSS stylesheet with comprehensive styling -->
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Small helper styles for the services video mute button */
-        .services-video-wrapper { position: relative; }
+        .services-video-wrapper {
+            position: relative;
+        }
+
         .video-mute-button {
             position: absolute;
             top: 12px;
             right: 12px;
-            background: rgba(0,0,0,0.6);
+            background: rgba(0, 0, 0, 0.6);
             color: #fff;
             border: none;
             padding: 8px 10px;
@@ -43,10 +57,19 @@ Features: Responsive design, modern animations, accessibility optimized
             font-size: 16px;
             touch-action: manipulation;
         }
-        .video-mute-button:focus { outline: 2px solid #fff; }
+
+        .video-mute-button:focus {
+            outline: 2px solid #fff;
+        }
+
         /* Ensure a minimum touch target on small devices */
         @media (max-width: 600px) {
-            .video-mute-button { padding: 12px 14px; font-size: 18px; top: 10px; right: 10px; }
+            .video-mute-button {
+                padding: 12px 14px;
+                font-size: 18px;
+                top: 10px;
+                right: 10px;
+            }
         }
     </style>
 </head>
@@ -56,6 +79,7 @@ Features: Responsive design, modern animations, accessibility optimized
 BODY SECTION - MAIN WEBSITE CONTENT
 ==========================================
 -->
+
 <body>
     <!--
     ==========================================
@@ -72,7 +96,7 @@ BODY SECTION - MAIN WEBSITE CONTENT
             <!-- Logo section with icon and text -->
             <a href="index.html" class="logo">
                 <!-- Logo image -->
-                <img src="img/logo/clouduko.jpg" alt="Cloud UKO" class="logo-img">
+                <img src="img/logo/Logo color-01.png" alt="Cloud UKO" class="logo-img">
                 <!-- Logo text and tagline -->
                 <div>
                     <div class="logo-text">Cloud UKO</div>
@@ -90,7 +114,7 @@ BODY SECTION - MAIN WEBSITE CONTENT
             </ul>
 
             <!-- Call-to-action button -->
-            <a href="contact.html" class="get-started">Get Started</a>
+            <a href="contact.html" class="get-started">Book a Consultation</a>
 
             <!-- Mobile menu toggle button (hamburger) -->
             <button class="mobile-menu-toggle" id="mobile-toggle">
@@ -106,7 +130,7 @@ BODY SECTION - MAIN WEBSITE CONTENT
                 <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="service.html" class="nav-link">Services</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li> 
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </div>
@@ -133,7 +157,7 @@ BODY SECTION - MAIN WEBSITE CONTENT
     Includes scroll indicator to guide users to next section.
     ==========================================
     -->
-        </div>
+    </div>
 
     <section class="hero">
         <!-- Hero content container -->
@@ -154,7 +178,7 @@ BODY SECTION - MAIN WEBSITE CONTENT
 
             <!-- Detailed description of services -->
             <p class="hero-description">
-                Transform your business operations, automate marketing and sales processes, 
+                Transform your business operations, automate marketing and sales processes,
                 and unlock measurable, long-term growth through one unified cloud platform
             </p>
 
@@ -166,7 +190,7 @@ BODY SECTION - MAIN WEBSITE CONTENT
                 </a>
                 <!-- Secondary action button -->
                 <a href="service.html" class="btn btn-secondary">
-                    View Pricing
+                    View Services
                 </a>
             </div>
         </div>
@@ -181,7 +205,7 @@ BODY SECTION - MAIN WEBSITE CONTENT
         </div>
     </section>
 
-    
+
 
 
 
@@ -214,11 +238,6 @@ BODY SECTION - MAIN WEBSITE CONTENT
                     <div class="stat-value">20+</div>
                     <div class="stat-label">Hours Saved Weekly</div>
                 </div>
-                <!-- Revenue Generated Stat -->
-                <div class="stat-item" data-target="3">
-                    <div class="stat-value">3M+</div>
-                    <div class="stat-label">Revenue Generated</div>
-                </div>
             </div>
         </div>
     </section>
@@ -230,29 +249,40 @@ BODY SECTION - MAIN WEBSITE CONTENT
     <section class="services-overview">
         <div class="services-overview-container">
 
-                <div class="services-video-wrapper">
+            <div class="services-video-wrapper">
                 <video id="servicesVideo" autoplay muted loop playsinline class="services-video">
                     <source src="img/cloudUko-what we do.mp4" type="video/mp4">
                 </video>
-                <button id="mute-btn" class="video-mute-button" aria-pressed="false" aria-label="Unmute video">🔇</button>
+                <button id="mute-btn" class="video-mute-button" aria-pressed="false"
+                    aria-label="Unmute video">🔇</button>
                 <div class="video-overlay"></div>
             </div>
 
             <div class="services-content">
                 <h2 class="services-title">What We Do</h2>
                 <p class="services-subtitle">
-                  We deliver end-to-end digital solutions that help businesses establish a strong online presence, streamline operations, and scale with confidence. From high-performance websites and custom systems to automation, branding, and digital marketing, we build technology that works for your business and supports long-term growth in a competitive digital landscape.
+                    We deliver end-to-end digital solutions that help businesses establish a strong online presence,
+                    streamline operations, and scale with confidence. From high-performance websites and custom systems
+                    to automation, branding, and digital marketing, we build technology that works for your business and
+                    supports long-term growth in a competitive digital landscape.
                 </p>
 
                 <div class="services-list">
                     <button type="button" class="service-option" data-service="Web Development">Web Development</button>
-                    <button type="button" class="service-option" data-service="System & Platform Development">System &amp; Platform Development</button>
+                    <button type="button" class="service-option" data-service="System & Platform Development">System
+                        &amp; Platform Development</button>
                     <button type="button" class="service-option" data-service="AI Automation">AI Automation</button>
-                    <button type="button" class="service-option" data-service="Marketing Strategy & Automation">Marketing Strategy &amp; Automation</button>
-                    <button type="button" class="service-option" data-service="Branding & Identity Development">Branding &amp; Identity Development</button>
-                    <button type="button" class="service-option" data-service="Business Process Optimisation">Business Process Optimisation</button>
-                    <button type="button" class="service-option" data-service="Technical Support & Maintenance">Technical Support &amp; Maintenance</button>
-                    <button type="button" class="service-option" data-service="Analytics, Reporting & Integrations">Analytics, Reporting &amp; Integrations</button>
+                    <button type="button" class="service-option"
+                        data-service="Marketing Strategy & Automation">Marketing Strategy &amp; Automation</button>
+                    <button type="button" class="service-option" data-service="Branding & Identity Development">Branding
+                        &amp; Identity Development</button>
+                    <button type="button" class="service-option" data-service="Business Process Optimisation">Business
+                        Process Optimisation</button>
+                    <button type="button" class="service-option"
+                        data-service="Technical Support & Maintenance">Technical Support &amp; Maintenance</button>
+                    <button type="button" class="service-option"
+                        data-service="Analytics, Reporting & Integrations">Analytics, Reporting &amp;
+                        Integrations</button>
                 </div>
             </div>
 
@@ -276,7 +306,7 @@ BODY SECTION - MAIN WEBSITE CONTENT
             <div class="packages-header">
                 <h2 class="packages-title">Digital Transformation Packages</h2>
                 <p class="packages-subtitle">
-                    Choose the perfect solution for your business size and needs. 
+                    Choose the perfect solution for your business size and needs.
                     All packages include our comprehensive support and proven methodologies.
                 </p>
             </div>
@@ -288,9 +318,9 @@ BODY SECTION - MAIN WEBSITE CONTENT
                     <!-- Package icon -->
                     <div class="package-icon">
                         <!-- Store icon SVG -->
-                       <div class="service-icon">
-                        <img src="img/icons/User_03.svg" alt="Cloud icon" />
-                       </div> 
+                        <div class="service-icon">
+                            <img src="img/icons/User_03.svg" alt="Cloud icon" />
+                        </div>
                     </div>
                     <!-- Package name -->
                     <h3 class="package-name">Small Business</h3>
@@ -300,14 +330,13 @@ BODY SECTION - MAIN WEBSITE CONTENT
                     </p>
                     <!-- Package pricing -->
                     <div class="package-price">Book a consultation</div>
-                    <p class="package-upkeep">Setup cost + R 4,800/mo</p>
-                    
+
                     <!-- Package benefits badges -->
                     <div class="package-badges">
                         <span class="package-badge badge-roi">650% ROI</span>
                         <span class="package-badge badge-savings">R 240K Savings</span>
                     </div>
-                    
+
                     <!-- Package features list -->
                     <ul class="package-features">
                         <li><span class="check">✓</span> Website & E-commerce Setup</li>
@@ -317,7 +346,7 @@ BODY SECTION - MAIN WEBSITE CONTENT
                         <li><span class="check">✓</span> Mobile Optimization</li>
                         <li><span class="check">✓</span> 24/7 Support</li>
                     </ul>
-                    
+
                     <!-- Package call-to-action button -->
                     <a href="contact.html" class="package-button">Get Started</a>
                 </div>
@@ -328,11 +357,11 @@ BODY SECTION - MAIN WEBSITE CONTENT
                     <div class="package-icon">
                         <!-- Building icon SVG -->
                         <div class="package-icon">
-                        <!-- Store icon SVG -->
-                       <div class="service-icon">
-                        <img src="img/icons/Users.svg" alt="Cloud icon" />
-                       </div> 
-                    </div>
+                            <!-- Store icon SVG -->
+                            <div class="service-icon">
+                                <img src="img/icons/Users.svg" alt="Cloud icon" />
+                            </div>
+                        </div>
                     </div>
                     <!-- Package name -->
                     <h3 class="package-name">Medium Business</h3>
@@ -342,14 +371,13 @@ BODY SECTION - MAIN WEBSITE CONTENT
                     </p>
                     <!-- Package pricing -->
                     <div class="package-price">Book a consultation</div>
-                    <p class="package-upkeep">Setup cost + R 11,500/mo</p>
-                    
+
                     <!-- Package benefits badges -->
                     <div class="package-badges">
                         <span class="package-badge badge-roi">750% ROI</span>
                         <span class="package-badge badge-savings">R 580K Savings</span>
                     </div>
-                    
+
                     <!-- Package features list -->
                     <ul class="package-features">
                         <li><span class="check">✓</span> Advanced E-commerce Platform</li>
@@ -360,7 +388,7 @@ BODY SECTION - MAIN WEBSITE CONTENT
                         <li><span class="check">✓</span> Team Collaboration Tools</li>
                         <li><span class="check">✓</span> Priority Support</li>
                     </ul>
-                    
+
                     <!-- Package call-to-action button -->
                     <a href="contact.html" class="package-button">Get Started</a>
                 </div>
@@ -371,11 +399,11 @@ BODY SECTION - MAIN WEBSITE CONTENT
                     <div class="package-icon">
                         <!-- Enterprise icon SVG -->
                         <div class="package-icon">
-                        <!-- Store icon SVG -->
-                       <div class="service-icon">
-                        <img src="img/icons/Users_Group.svg" alt="Cloud icon" />
-                       </div> 
-                    </div>
+                            <!-- Store icon SVG -->
+                            <div class="service-icon">
+                                <img src="img/icons/Users_Group.svg" alt="Cloud icon" />
+                            </div>
+                        </div>
                     </div>
                     <!-- Package name -->
                     <h3 class="package-name">Enterprise</h3>
@@ -386,13 +414,13 @@ BODY SECTION - MAIN WEBSITE CONTENT
                     <!-- Package pricing -->
                     <div class="package-price">Book a consultation</div>
                     <p class="package-upkeep">Setup cost + Custom pricing</p>
-                    
+
                     <!-- Package benefits badges -->
                     <div class="package-badges">
                         <span class="package-badge badge-roi">850% ROI</span>
-                        <span class="package-badge badge-savings">R 2.8M+ Savings</span>
+
                     </div>
-                    
+
                     <!-- Package features list -->
                     <ul class="package-features">
                         <li><span class="check">✓</span> Custom Enterprise Solutions</li>
@@ -403,7 +431,7 @@ BODY SECTION - MAIN WEBSITE CONTENT
                         <li><span class="check">✓</span> Dedicated Account Manager</li>
                         <li><span class="check">✓</span> White-glove Support</li>
                     </ul>
-                    
+
                     <!-- Package call-to-action button -->
                     <a href="contact.html" class="package-button">Get Started</a>
                 </div>
@@ -427,7 +455,7 @@ BODY SECTION - MAIN WEBSITE CONTENT
             <div class="features-header">
                 <h2 class="features-title">Why Choose Cloud UKO?</h2>
                 <p class="features-subtitle">
-                    Our integrated platform combines the best tools and methodologies 
+                    Our integrated platform combines the best tools and methodologies
                     to deliver exceptional results for your digital transformation.
                 </p>
             </div>
@@ -440,7 +468,7 @@ BODY SECTION - MAIN WEBSITE CONTENT
                     <h3 class="feature-title">Advanced Automation</h3>
                     <!-- Feature description -->
                     <p class="feature-description">
-                        Streamline your workflows with intelligent automation that learns and adapts 
+                        Streamline your workflows with intelligent automation that learns and adapts
                         to your business processes, saving time and reducing errors.
                     </p>
                 </div>
@@ -451,7 +479,7 @@ BODY SECTION - MAIN WEBSITE CONTENT
                     <h3 class="feature-title">Seamless Integration</h3>
                     <!-- Feature description -->
                     <p class="feature-description">
-                        Connect all your existing tools and systems into one unified platform 
+                        Connect all your existing tools and systems into one unified platform
                         for better data flow and operational efficiency.
                     </p>
                 </div>
@@ -462,7 +490,7 @@ BODY SECTION - MAIN WEBSITE CONTENT
                     <h3 class="feature-title">Predictive Analytics</h3>
                     <!-- Feature description -->
                     <p class="feature-description">
-                        Make data-driven decisions with advanced analytics and machine learning 
+                        Make data-driven decisions with advanced analytics and machine learning
                         that predict trends and optimize your business performance.
                     </p>
                 </div>
@@ -486,10 +514,10 @@ BODY SECTION - MAIN WEBSITE CONTENT
             <h2 class="cta-title">Ready to Transform Your Business?</h2>
             <!-- CTA description -->
             <p class="cta-description">
-                Join hundreds of successful businesses that have already transformed 
+                Join hundreds of successful businesses that have already transformed
                 their operations with Cloud UKO's proven methodology.
             </p>
-            
+
             <!-- CTA buttons -->
             <div class="cta-buttons">
                 <!-- Primary CTA button -->
@@ -503,46 +531,47 @@ BODY SECTION - MAIN WEBSITE CONTENT
             </div>
         </div>
     </section>
-    
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-container">
-        <div class="footer-logo">
-            <div class="footer-logo-icon">
-                <img src="img/logo/clouduko.jpg" alt="Cloud UKO" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
-            </div>
-            <div>
-                <div style="font-size: 1.5rem; font-weight: bold; color: white;">Cloud UKO</div>
-                <div style="font-size: 0.75rem; color: #9ca3af;">United Knowledge Operations</div>
-            </div>
-        </div>
-        
-        <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="service.html">Services</a>
-            <!-- <a href="projects.html">Projects</a> -->
-            <a href="contact.html">Contact</a>
-        </div>
 
-        <div class="footer-socials">
-            <a href="https://www.linkedin.com/company/cloud-uko" target="_blank" aria-label="LinkedIn">
-                <img src="img/icons/linkedin.svg" alt="LinkedIn">
-            </a>
-            <a href="https://www.facebook.com/clouduko" target="_blank" aria-label="Facebook">
-                <img src="img/icons/facebook.svg" alt="Facebook">
-            </a>
-            <a href="https://www.instagram.com/clouduko" target="_blank" aria-label="Instagram">
-                <img src="img/icons/instagram.svg" alt="Instagram">
-            </a>
-        </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <div class="footer-logo-icon">
+                    <img src="img/logo/Logo color-01.png" alt="Cloud UKO"
+                        style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
+                </div>
+                <div>
+                    <div style="font-size: 1.5rem; font-weight: bold; color: white;">Cloud UKO</div>
+                    <div style="font-size: 0.75rem; color: #9ca3af;">United Knowledge Operations</div>
+                </div>
+            </div>
 
-        
-        <p class="footer-text">
-            © 2025 Cloud UKO. Transforming businesses through integrated digital solutions.
-        </p>
-    </div>
-</footer>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="service.html">Services</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/company/cloud-uko" target="_blank" aria-label="LinkedIn">
+                    <img src="img/icons/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.facebook.com/clouduko" target="_blank" aria-label="Facebook">
+                    <img src="img/icons/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/clouduko" target="_blank" aria-label="Instagram">
+                    <img src="img/icons/instagram.png" alt="Instagram">
+                </a>
+            </div>
+
+
+            <p class="footer-text">
+                © 2025 Cloud UKO. Transforming businesses through integrated digital solutions.
+            </p>
+        </div>
+    </footer>
 
     <!--
     ==========================================
@@ -560,14 +589,14 @@ BODY SECTION - MAIN WEBSITE CONTENT
          * Mobile Menu Toggle Functionality
          * Handles the hamburger menu for mobile devices
          */
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Get mobile menu elements
             const mobileToggle = document.getElementById('mobile-toggle');
             const mobileMenu = document.getElementById('mobile-menu');
-            
+
             // Add click event listener to mobile toggle button
             if (mobileToggle && mobileMenu) {
-                mobileToggle.addEventListener('click', function() {
+                mobileToggle.addEventListener('click', function () {
                     // Toggle active class on both button and menu
                     mobileToggle.classList.toggle('active');
                     mobileMenu.classList.toggle('active');
@@ -586,7 +615,7 @@ BODY SECTION - MAIN WEBSITE CONTENT
 
             if (getStartedBtn && aiCharacter) {
                 // Show AI character on hover
-                getStartedBtn.addEventListener('mouseenter', function() {
+                getStartedBtn.addEventListener('mouseenter', function () {
                     aiCharacter.classList.add('show');
                     // Auto-hide after 4 seconds
                     aiTimeout = setTimeout(() => {
@@ -597,7 +626,7 @@ BODY SECTION - MAIN WEBSITE CONTENT
                 // Hide AI character when leaving the container area
                 const getStartedContainer = document.querySelector('.get-started-container');
                 if (getStartedContainer) {
-                    getStartedContainer.addEventListener('mouseleave', function() {
+                    getStartedContainer.addEventListener('mouseleave', function () {
                         clearTimeout(aiTimeout);
                         setTimeout(() => {
                             aiCharacter.classList.remove('show');
@@ -606,12 +635,12 @@ BODY SECTION - MAIN WEBSITE CONTENT
                 }
 
                 // Keep AI visible when hovering over the AI character itself
-                aiCharacter.addEventListener('mouseenter', function() {
+                aiCharacter.addEventListener('mouseenter', function () {
                     clearTimeout(aiTimeout);
                     aiCharacter.classList.add('show');
                 });
 
-                aiCharacter.addEventListener('mouseleave', function() {
+                aiCharacter.addEventListener('mouseleave', function () {
                     setTimeout(() => {
                         aiCharacter.classList.remove('show');
                     }, 500);
@@ -623,8 +652,8 @@ BODY SECTION - MAIN WEBSITE CONTENT
              * Adds scrolled class to navbar when user scrolls down
              */
             const navbar = document.getElementById('navbar');
-            
-            window.addEventListener('scroll', function() {
+
+            window.addEventListener('scroll', function () {
                 if (window.scrollY > 50) {
                     navbar.classList.add('scrolled');
                 } else {
@@ -641,7 +670,7 @@ BODY SECTION - MAIN WEBSITE CONTENT
         function scrollToSection(sectionId) {
             const section = document.getElementById(sectionId);
             if (section) {
-                section.scrollIntoView({ 
+                section.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                 });
@@ -657,7 +686,7 @@ BODY SECTION - MAIN WEBSITE CONTENT
             rootMargin: '0px 0px -50px 0px'
         };
 
-        const observer = new IntersectionObserver(function(entries) {
+        const observer = new IntersectionObserver(function (entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
@@ -673,7 +702,7 @@ BODY SECTION - MAIN WEBSITE CONTENT
         });
 
         // Mute button wiring: ensure autoplay works (video muted) and allow toggle
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const servicesVideo = document.getElementById('servicesVideo');
             const muteBtn = document.getElementById('mute-btn');
             if (servicesVideo) {
@@ -681,11 +710,11 @@ BODY SECTION - MAIN WEBSITE CONTENT
                 servicesVideo.muted = true;
                 // Try to play (some browsers require user gesture; catch errors)
                 const p = servicesVideo.play();
-                if (p && typeof p.then === 'function') p.catch(() => {});
+                if (p && typeof p.then === 'function') p.catch(() => { });
             }
 
             if (muteBtn && servicesVideo) {
-                muteBtn.addEventListener('click', function() {
+                muteBtn.addEventListener('click', function () {
                     // Toggle muted state
                     servicesVideo.muted = !servicesVideo.muted;
                     // Update ARIA to indicate 'pressed' when unmuted
@@ -698,7 +727,7 @@ BODY SECTION - MAIN WEBSITE CONTENT
                         try {
                             servicesVideo.volume = 1.0;
                             const playPromise = servicesVideo.play();
-                            if (playPromise && typeof playPromise.then === 'function') playPromise.catch(() => {});
+                            if (playPromise && typeof playPromise.then === 'function') playPromise.catch(() => { });
                         } catch (err) {
                             // ignore playback errors
                         }
@@ -713,23 +742,12 @@ BODY SECTION - MAIN WEBSITE CONTENT
                     options.forEach(o => o.classList.remove('selected'));
                     // Add selected class to clicked option
                     this.classList.add('selected');
-                    // Preferred behavior: navigate to contact page with service query
-                    const service = this.getAttribute('data-service');
-                    if (service) {
-                        const url = 'contact.html?service=' + encodeURIComponent(service);
-                        window.location.href = url;
-                        return;
-                    }
-                    // Fallback: open mailto if provided
-                    const mailto = this.getAttribute('data-mailto');
-                    if (mailto) {
-                        window.location.href = mailto;
-                    }
                 });
             });
         });
 
-    
+
     </script>
 </body>
+
 </html>

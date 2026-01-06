@@ -281,6 +281,7 @@ body {
     /* Remove default button border */
     cursor: pointer;
     /* Show pointer cursor */
+    text-align: center;
 }
 
 /* Get Started button hover effect */

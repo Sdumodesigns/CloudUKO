@@ -909,6 +909,8 @@ body {
 
 /* Individual package card */
 .package-card {
+    display: flex;
+    flex-direction: column;
     border: 1px solid rgba(51, 65, 85, 0.3);
     /* Subtle border */
     border-radius: 1.5rem;
@@ -1195,6 +1197,7 @@ body {
 
 /* Package button styling */
 .package-button {
+    margin-top: auto;
     width: 100%;
     /* Full width button */
     padding: 1.25rem;
@@ -1690,8 +1693,8 @@ border-width: 1px;
 
 /* Service icon styling */
 .service-icon {
-    width: 80px;
-    height: 80px;
+    width: 48px;
+    height: 48px;
     margin: 0 auto 1.5rem;
     border-radius: 1.5rem;
     display: flex;
@@ -1705,8 +1708,8 @@ border-width: 1px;
 /* Ensure service icon images scale and sit nicely inside the colored square */
 .service-icon img,
 .service-icon svg {
-    width: 48px;
-    height: 48px;
+    width: 22px;
+    height: 22px;
     object-fit: contain;
     display: block;
     pointer-events: none;

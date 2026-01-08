@@ -17,25 +17,6 @@ Cloud UKO (United Knowledge Operations) provides integrated digital transformati
 - 👥 **CRM Integration** - Unified customer management
 - ✅ **Proven Results** - Up to 85% cost reduction
 
-## Digital Transformation Packages
-
-### 🔴 Small Business - R 23,000
-Perfect for freelancers, start-ups, and small shops
-- Monthly upkeep: R 4,800/mo
-- ROI: +773%
-- Savings: R 502,500
-
-### 🔵 Medium Business - R 45,000 ⭐ **Featured**
-Ideal for growing companies and agencies
-- Monthly upkeep: R 11,500/mo  
-- ROI: +503%
-- Savings: R 1,001,000
-
-### 🟣 Enterprise - R 830,000
-High-performance automation for large organizations
-- Monthly upkeep: Contact us
-- ROI: +141-381%
-- Savings: R 1.17M - 3.17M
 
 ## Website Structure
 

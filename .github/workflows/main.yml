@@ -21,6 +21,6 @@ jobs:
           protocol: ftp
           port: 21
           # 👇 this matches your repo folder
-          local-dir: "./clouduko/"
+          local-dir: ./
           # 👇 this is the destination on your hosting server
           server-dir: /home/clouduko/public_html/

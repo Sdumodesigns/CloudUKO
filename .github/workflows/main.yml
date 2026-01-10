@@ -20,4 +20,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           port: 21
-          local-dir: /home/clouduko/public_html
+          # 👇 this must be a folder in your repo
+          local-dir: ./ 
+          # 👇 this is the remote folder on your hosting server
+          server-dir: /home/clouduko/public_html

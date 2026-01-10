@@ -7,17 +7,17 @@ name: 🚀 Deploy website on push
 
 jobs:
   web-deploy:
-    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: 🚚 Get latest code
+      - name: 🚚 Checkout repository
         uses: actions/checkout@v4
 
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+      - name: 🚀 Deploy via SFTP
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: ftp.clouduko.co.za
-          username: sdumodesigns@clouduko.co.za
+          host: ftp.clouduko.co.za
+          username: SdumoDesigns
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          port: 21
+          port: 22
+          source: "."
+          target: "/home/clouduko/public_html"

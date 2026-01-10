@@ -12,12 +12,12 @@ jobs:
       - name: 🚚 Checkout repository
         uses: actions/checkout@v4
 
-      - name: 🚀 Deploy via SFTP
-        uses: appleboy/scp-action@v0.1.7
+      - name: 🚀 FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.0
         with:
-          host: ftp.clouduko.co.za
-          username: SdumoDesigns
+          server: ftp.clouduko.co.za
+          username: sdumodesigns@clouduko.co.za
           password: ${{ secrets.FTP_PASSWORD }}
-          port: 22
-          source: "."
-          target: "/home/clouduko/public_html"
+          protocol: ftp
+          port: 21
+          local-dir: ./dist
